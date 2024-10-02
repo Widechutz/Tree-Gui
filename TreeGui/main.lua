@@ -1,5 +1,3 @@
-local SaveMode = false
-
 if SaveMode then
     getgenv().SecureMode = true
 end
@@ -39,3 +37,17 @@ local Window = ArrayField:CreateWindow({
        Key = {"Baum"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
     }
  })
+
+ Window:Prompt({
+   Title = 'Tree Gui',
+   SubTitle = 'Wellcome',
+   Content = 'Wellcome to Tree Gui. Hope you enjoy',
+   Actions = {
+       Accept = {
+           Name = 'Dive in',
+           Callback = function()
+               print('Wellcome to Tree Guy')
+           end,
+       }
+   }
+})
